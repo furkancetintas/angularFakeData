@@ -1,0 +1,18 @@
+.card {
+    min-height: 370px;
+    position: relative;
+}
+.photo-id{
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    top: 0;
+    right: 0;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 4px;
+}
