@@ -1,0 +1,87 @@
+<header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container d-flex flex-md-row justify-content-between">
+      <a class="navbar-brand">myFirstProject.</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+        [class.show]="isOpen"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="py-2 d-none d-md-inline-block"
+              routerLink="/users"
+              [routerLinkActive]="'active-link'"
+            >
+              <fa-icon [icon]="faUsers"></fa-icon>
+              Users
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="py-2 d-none d-md-inline-block"
+              routerLink="/todos"
+              [routerLinkActive]="'active-link'"
+            >
+              <fa-icon [icon]="faClipboardList"></fa-icon>
+              Todos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="py-2 d-none d-md-inline-block"
+              routerLink="/posts"
+              [routerLinkActive]="'active-link'"
+            >
+              <fa-icon [icon]="faMailBulk"></fa-icon>
+              Posts
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="py-2 d-none d-md-inline-block"
+              routerLink="/photos"
+              [routerLinkActive]="'active-link'"
+            >
+              <fa-icon [icon]="faImages"></fa-icon>
+              Photos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="py-2 d-none d-md-inline-block"
+              routerLink="/albums"
+              [routerLinkActive]="'active-link'"
+            >
+              <fa-icon [icon]="faMusic"></fa-icon>
+              Albums
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="py-2 d-none d-md-inline-block"
+              routerLink="/comments"
+              [routerLinkActive]="'active-link'"
+            >
+              <fa-icon [icon]="faComments"></fa-icon>
+              Comments
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

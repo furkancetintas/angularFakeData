@@ -1,0 +1,19 @@
+.nav-item {
+    margin: 0px 15px;
+}
+.nav-item:last-child{
+    margin-right: 0;
+}
+
+.nav-item a {
+    color: #777777;
+    transition: color .15s ease-in-out;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: #000;
+}
+.nav-item .active-link {
+    color: #1d1d1d;
+}
