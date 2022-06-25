@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { CoreHttpService } from 'src/shared/services/http-core.service';
 import { UserModel } from '../models/user.model';
@@ -18,7 +18,7 @@ export class UsersService extends CoreHttpService {
   getUsersMethod() : Observable<UserModel[]> {
     const newPath = `${this.API_URL}`;
     const request = this.getMethod(newPath)
-    return request
+    return request;
   }
 
 }
