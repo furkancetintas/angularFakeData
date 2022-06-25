@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TodosService } from './services/todos.service';
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { TodoModel } from './models/todo.model';
 
 @Component({
   selector: 'app-todos',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  constructor() { }
+  todos:TodoModel[] = [];
+
+  faCheck = faCheck;
+
+
+
+  constructor(
+    private todoService: TodosService
+  ) { }
 
   ngOnInit(): void {
+    this.loadTodos();
+  }
+
+  loadTodos(){
+    this.todoService.getTodosMethod().subscribe((response) =>{
+      console.log(response);
+      this.todos = response;
+    })
   }
 
 }
