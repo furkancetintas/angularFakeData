@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { CommentModel } from './models/comment.model';
+import { CommentsService } from './services/comments.service';
+
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-comments',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
 
-  constructor() { }
+  commentsTitle = "Comments";
+
+  faEnvelope = faEnvelope;
+
+  comments:CommentModel[] = [];
+
+  constructor(
+    private commentsService:CommentsService
+  ) { }
 
   ngOnInit(): void {
+    this.loadComments();
+  }
+
+  loadComments(){
+    this.commentsService.getCommentsMethod().subscribe((response) =>{
+      console.log(response);
+      this.comments = response;
+    })
   }
 
 }
