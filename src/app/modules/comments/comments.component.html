@@ -1,1 +1,21 @@
-<p>comments works!</p>
+<div class="container">
+  <div class="row mt-2 d-flex justify-content-center">
+    <h3 class="my-3">{{ commentsTitle }}</h3>
+    <div class="col-md-3" *ngFor="let comment of comments">
+      <div class="card text-bg-light mb-3">
+        <div class="card-header">
+          <fa-icon [icon]="faEnvelope"></fa-icon>
+          <span class="email-size">
+            {{ comment.email }}
+          </span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ comment.name | titlecase }}</h5>
+          <p class="card-text">
+            {{ comment.body }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
