@@ -1,70 +1,45 @@
 <div class="container">
-  <div class="row mt-2">
-    <div class="col-md-3">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+  <div class="row mt-2 d-flex justify-content-center">
+    <div class="col-md-10">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th class="col-4 text-start">#id</th>
+            <th class="col-4 text-start">Başlık</th>
+            <th class="col-4 text-center">Tamamlanma Durumu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let todo of todos">
+            <th>{{ todo.id }}</th>
+            <td>{{ todo.title }}</td>
+            <ng-container *ngIf="todo.completed === true; else elseTemplate">
+              <td>
+                <span
+                  [ngClass]="{
+                    'todo-true': todo.completed === true,
+                    'todo-common-class': true
+                  }"
+                >
+                  <fa-icon [icon]="faCheck"></fa-icon>
+                </span>
+              </td>
+            </ng-container>
+            <ng-template #elseTemplate>
+              <td>
+                <span
+                  [ngClass]="{
+                    'todo-false': todo.completed === false,
+                    'todo-common-class': true
+                  }"
+                >
+                  <fa-icon [icon]="faCheck"></fa-icon>
+                </span>
+              </td>
+            </ng-template>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
