@@ -1,0 +1,18 @@
+.todo-true{
+    background: green;
+}
+
+.todo-false{
+    background: red;
+}
+
+.todo-common-class{
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
