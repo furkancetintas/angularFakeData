@@ -1,1 +1,16 @@
-<p>photos works!</p>
+<div class="container">
+  <h3 class="mt-4">{{ photosTitle }}</h3>
+  <div class="row mt-2 d-flex justify-content-center">
+    <div class="col-md-3" *ngFor="let photo of photos">
+      <div class="card my-2">
+        <img [src]="photo.thumbnailUrl" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <span class="photo-id">{{ photo.id }}</span>
+          <h6 class="card-title">
+            {{ photo.title | uppercase }}
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
