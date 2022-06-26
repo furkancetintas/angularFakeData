@@ -1,0 +1,16 @@
+.card{
+    position: relative;
+}
+
+.post-id{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #3d3d3d;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
