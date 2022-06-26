@@ -20,6 +20,8 @@ export class UsersComponent implements OnInit {
 
   usersTitle = "Users";
 
+  filterText = "";
+
   users:UserModel[] = [];
 
   constructor(
@@ -27,7 +29,6 @@ export class UsersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(faUser);
     this.loadUsers();
   }
 
