@@ -10,6 +10,8 @@ import { TodoModel } from './models/todo.model';
 })
 export class TodosComponent implements OnInit {
 
+  todosTitle = "Todos";
+
   todos:TodoModel[] = [];
 
   faCheck = faCheck;
