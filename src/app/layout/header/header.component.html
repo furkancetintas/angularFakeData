@@ -4,6 +4,7 @@
       <a class="navbar-brand" routerLink="/">myFirstProject.</a>
       <button
         class="navbar-toggler"
+        (click)="toggleNavbar()"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -15,6 +16,7 @@
       </button>
       <div
         class="collapse navbar-collapse justify-content-end"
+        [class.show]="isOpen"
         id="navbarSupportedContent"
       >
         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
