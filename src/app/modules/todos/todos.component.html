@@ -28,12 +28,13 @@
             <ng-template #elseTemplate>
               <td>
                 <span
+                  style="font-weight: bold"
                   [ngClass]="{
                     'todo-false': todo.completed === false,
                     'todo-common-class': true
                   }"
                 >
-                  <fa-icon [icon]="faCheck"></fa-icon>
+                  X
                 </span>
               </td>
             </ng-template>
