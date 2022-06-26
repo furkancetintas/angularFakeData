@@ -11,9 +11,7 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ comment.name | titlecase }}</h5>
-          <p class="card-text">
-            {{ comment.body }}
-          </p>
+          <p class="card-text">{{ comment.body | slice: 0:99 }}...</p>
         </div>
       </div>
     </div>
