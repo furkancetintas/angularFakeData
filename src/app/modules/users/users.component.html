@@ -1,1 +1,37 @@
-<p *ngFor="let user of users">{{ user.name }}</p>
+<div class="container">
+  <h3 class="mt-3">{{ usersTitle }}</h3>
+  <div class="row mt-2 d-flex justify-content-center">
+    <div class="col-md-3" *ngFor="let user of users">
+      <div class="card my-2 d-flex m-auto">
+        <div class="card-body">
+          <p class="user-website" style="font-size: 14px">
+            <fa-icon [icon]="faGlobe"></fa-icon> <span>{{ user.website }}</span>
+          </p>
+          <span class="user-id">{{ user.id }}</span>
+          <h2 class="text-center" style="font-size: 40px">
+            <fa-icon [icon]="faUser"></fa-icon>
+          </h2>
+          <h5 class="card-title mt-3 text-center">
+            {{ user.name | titlecase | slice: 0:22 }}
+          </h5>
+          <p class="card-text text-center" style="font-size: 14px">
+            <fa-icon [icon]="faBuilding"></fa-icon> {{ user.company.name }}
+          </p>
+          <p class="card-text text-center" style="font-size: 14px">
+            <fa-icon [icon]="faCity"></fa-icon>
+            {{ user.address.city }}
+          </p>
+          <p class="card-text text-center" style="font-size: 14px">
+            <fa-icon [icon]="faLocationArrow" style="color: #990000"></fa-icon>
+            {{ user.address.city }}
+          </p>
+          <p class="card-text text-center" style="font-size: 14px">
+            <fa-icon [icon]="faEnvelope"></fa-icon>
+            {{ user.email }}
+          </p>
+          <a class="btn btn-sm btn-outline-primary">Mesaj</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
