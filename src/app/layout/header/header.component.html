@@ -1,7 +1,7 @@
 <header class="site-header sticky-top">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container d-flex flex-md-row justify-content-between">
-      <a class="navbar-brand">myFirstProject.</a>
+      <a class="navbar-brand" routerLink="/">myFirstProject.</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -16,13 +16,11 @@
       <div
         class="collapse navbar-collapse justify-content-end"
         id="navbarSupportedContent"
-        [class.show]="isOpen"
-        id="navbarSupportedContent"
       >
         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a
-              class="py-2 d-none d-md-inline-block"
+              class="py-2 nav-link d-md-inline-block"
               routerLink="/users"
               [routerLinkActive]="'active-link'"
             >
@@ -32,7 +30,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="py-2 d-none d-md-inline-block"
+              class="py-2 nav-link d-md-inline-block"
               routerLink="/todos"
               [routerLinkActive]="'active-link'"
             >
@@ -42,7 +40,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="py-2 d-none d-md-inline-block"
+              class="py-2 nav-link d-md-inline-block"
               routerLink="/posts"
               [routerLinkActive]="'active-link'"
             >
@@ -52,7 +50,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="py-2 d-none d-md-inline-block"
+              class="py-2 nav-link d-md-inline-block"
               routerLink="/photos"
               [routerLinkActive]="'active-link'"
             >
@@ -62,7 +60,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="py-2 d-none d-md-inline-block"
+              class="py-2 nav-link d-md-inline-block"
               routerLink="/albums"
               [routerLinkActive]="'active-link'"
             >
@@ -72,7 +70,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="py-2 d-none d-md-inline-block"
+              class="py-2 nav-link d-md-inline-block"
               routerLink="/comments"
               [routerLinkActive]="'active-link'"
             >
