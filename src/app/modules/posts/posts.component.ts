@@ -9,6 +9,7 @@ import { PostsService } from './services/posts.service';
 })
 export class PostsComponent implements OnInit {
 
+  postsTitle = "Posts"
 
   posts:PostModel[] = [];
   
